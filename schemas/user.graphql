@@ -1,0 +1,41 @@
+scalar Upload
+
+type User {
+	_id:ID!
+	email:String!
+	password:String!
+	phone:String!
+	name:String!
+	photo_url:String
+	direction:Direction
+	is_active:Boolean
+}
+
+type Direction{
+	type:String!
+	coordinates:[Float]!
+}
+
+input createUser{
+	email:String!
+	password:String!
+	phone:String!
+	name:String!
+	photo_url:Upload
+	direction:createDirection
+}
+
+input updateOneUser{
+	email:String
+	password:String
+	phone:String
+	name:String
+	photo_url:String
+	direction:createDirection,
+	is_active:Boolean
+}
+
+input createDirection{
+	type:String!
+	coordinates:[Float]!
+}

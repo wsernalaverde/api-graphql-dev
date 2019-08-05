@@ -1,0 +1,44 @@
+{
+  "name": "api-graphql-dev",
+  "version": "1.0.0",
+  "description": "Proyecto en graphql implementado para una app tipo uber eats",
+  "main": "app.js",
+  "scripts": {
+    "test": "set NODE_ENV=test && jest --forceExit",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wsernalaverde/api-graphql-dev.git"
+  },
+  "keywords": [
+    "graphql",
+    "mogodb",
+    "mongoose",
+    "jsonwebtoken"
+  ],
+  "author": "wsernalaverde",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cloudinary": "^1.14.0",
+    "dotenv": "^8.0.0",
+    "graphql-import": "^0.7.1",
+    "graphql-scalars": "^0.4.6",
+    "graphql-yoga": "^1.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.6"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  },
+  "bugs": {
+    "url": "https://github.com/wsernalaverde/api-graphql-dev/issues"
+  },
+  "homepage": "https://github.com/wsernalaverde/api-graphql-dev#readme"
+}

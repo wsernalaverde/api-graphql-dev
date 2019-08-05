@@ -1,0 +1,55 @@
+type Zone{
+	_id:ID!
+	zone:String!
+	location:Location
+	price:Float!
+	is_active:Boolean
+}
+
+
+type Location{
+	type:String!
+	coordinates:[[[Float!]]]!
+}
+
+input createZone{
+	zone:String!
+	location:createLocation
+	price:Float!
+	#category:Category
+}
+
+input createLocation{
+	type:String!
+	coordinates:[[[Float!]]]!
+}
+
+input updateZone{
+	zone:String
+	location:updateLocation
+	price:Float
+	is_active:Boolean
+}
+
+input updateLocation{
+	type:String
+	coordinates:[[[Float!]]]
+}
+
+# enum Category{
+# 	COMIDARAPIDA
+# 	REGIONAL
+# 	VEGETARIANA
+# }
+
+
+# input Store{
+# 	products:[Products]!
+# }
+
+# type Products{
+# 	name
+# 	price
+# 	slot
+# }
+

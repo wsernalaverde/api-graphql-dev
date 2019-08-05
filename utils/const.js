@@ -1,0 +1,3 @@
+module.exports = {
+  ENUM_CATEGORY: ['COMIDARAPIDA', 'REGIONAL', 'VEGETARIANA'],
+};

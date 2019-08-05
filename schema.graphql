@@ -1,0 +1,52 @@
+#import User,createUser,updateOneUser from './schemas/user.graphql'
+#import Zone,createZone,updateZone from './schemas/zone.graphql'
+scalar EmailAddress
+directive @auth on FIELD_DEFINITION | FIELD
+
+type Query{
+	getAllUsers:[User]!
+	getUserByEmail(email:EmailAddress!):User
+	getUserById(id:ID!):User!
+	me:User! @auth
+	getAllZones:[Zone]!
+	getZoneById(id:ID!):Zone!
+}
+
+type Mutation{
+	createUser(user:createUser!):User!
+	login(email:String!,password:String!):Auth!
+	updateUser(data:updateOneUser!):User! @auth
+	deleteUser:String! @auth
+	createOneZone(data:createZone):Zone!
+	updateOneZone(id:ID!,data:updateZone):Zone!
+	deleteZone(id:ID!):String!
+}
+
+type Auth{
+	token:String!,
+	message:String!
+}
+
+
+
+# type Query{
+# 	saludo(nombre:String!):Int! 
+# 	allPeople:[Persona]!
+# 	singlePerson(position:Int!):Persona
+# }
+
+# type Mutation{
+# 	addPeople(data:createPersona!):Persona!
+# }
+
+# type Persona {
+# 	nombre:String!
+# 	apellidos:String!
+# 	edad:Int
+# }
+
+# input createPersona{
+# 	nombre:String!
+# 	apellidos:String!
+# 	edad:Int
+# }
