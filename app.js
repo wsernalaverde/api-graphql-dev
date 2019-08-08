@@ -55,3 +55,5 @@ const options = {
 }
 
 server.start(options, ({ port }) => console.log(`Works in port ${port}`));
+
+module.exports = { schema }
