@@ -34,8 +34,8 @@ const StoreSchema = new mongoose.Schema({
     required: true,
   },
   score: {
-	type: Number,
-	default:5.0
+    type: Number,
+    default:5.0
   },
   logo_url: {
     type: String,
@@ -56,7 +56,7 @@ const StoreSchema = new mongoose.Schema({
           required: true,
         },
         photo_url: {
-          type: Number,
+          type: String,
         },
       },
     ],

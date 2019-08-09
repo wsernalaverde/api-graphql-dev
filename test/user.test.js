@@ -57,7 +57,7 @@ const MUTATION_UPDATE = `
 
 describe('Test update user', () => {
   afterEach(async () => await clearData())
-  
+
   it('Update data user', async () => {
     const newUser = {
       email: 'test@test.co',

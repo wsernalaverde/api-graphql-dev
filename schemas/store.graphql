@@ -1,0 +1,65 @@
+type Store{
+  _id:String!
+  name:String!
+  direction:Direction!
+  category:String!
+  phone:String!
+  score:Number
+  logo_url:String
+  is_active:Boolean
+  operation_time_start:[Date]!
+  operation_time_end:[Date]!
+  products:[Products]
+}
+
+type Direction{
+  type:String!
+	coordinates:[Float]!
+}
+
+type Products{
+  name:String!
+  price:Number!
+  slot:Number!
+  photo_url:String
+}
+
+input createStore{
+  name:String!
+  direction:createDirection!
+  category:String!
+  phone:String!
+  operation_time_start:[Date]
+  operation_time_end:[Date]
+}
+
+input createDirection{
+	type:String!
+	coordinates:[Float]!
+}
+
+input updateOneStore{
+  name:String
+  direction:createDirection
+  category:String
+  phone:String
+  score:Number
+  logo_url:String
+  is_active:Boolean
+  operation_time_start:[Date]
+  operation_time_end:[Date]
+  products:createProduct
+}
+
+input createProduct{
+  name:String!
+  price:Number!
+  slot:Number!
+  photo_url:String
+}
+
+# enum Category{
+# 	COMIDARAPIDA
+# 	REGIONAL
+# 	VEGETARIANA
+# }
